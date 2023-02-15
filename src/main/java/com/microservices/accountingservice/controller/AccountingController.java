@@ -16,7 +16,7 @@ public class AccountingController {
     AccountingService service;
 
     @PostMapping("/calculateSalary")
-    @CircuitBreaker(name = "salary-calculation", fallbackMethod = "calcSalaryFallbackResponse")
+//    @CircuitBreaker(name = "salary-calculation", fallbackMethod = "calcSalaryFallbackResponse")
     public Salary calcSalary(@RequestBody EmployeeSalary emp) {
         return service.calcSalary(emp);
     }
